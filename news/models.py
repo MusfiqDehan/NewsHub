@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class News(models.Model):
     headline = models.CharField(max_length=1024)
     original_link = models.CharField(max_length=2048)

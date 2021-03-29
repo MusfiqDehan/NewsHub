@@ -17,5 +17,8 @@ def scrape(website_url, tag_name, class_name):
 
 
 bbc_news = scrape("https://www.bbc.com/news", 'h3', 'nw-o-link-split__text')
+nbc_news = scrape("https://www.nbcnews.com/", 'h2', 'alacarte__headline')
 
 print(bbc_news)
+print('\n')
+print(nbc_news)

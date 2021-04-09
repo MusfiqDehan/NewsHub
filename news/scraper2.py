@@ -38,7 +38,7 @@ def findBySingleNews(newsLink):
 
 links = []
 
-url = "https://www.jugantor.com/all-news"
+url = "https://www.bbc.com/news"
 res = requests.get(url)
 soup = BeautifulSoup(res.text, 'html.parser')
 

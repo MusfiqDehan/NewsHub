@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse('NewsHub')
+    return render(request, 'news/index.html')

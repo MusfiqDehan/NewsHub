@@ -26,8 +26,8 @@ SECRET_KEY = '(2gaibgekze_h&%-u=j62@i9mk=v7exqq&e-p&y+hwfsays1$$'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'world-newshub.herokuapp.com'
+    'world-newshub.herokuapp.com',
+    '127.0.0.1'
     ]
 
 
@@ -123,6 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
+# STATIC_ROOT = BASE_DIR / 'static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

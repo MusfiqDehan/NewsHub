@@ -1,7 +1,10 @@
 body#main-body {
     background-color: #ffffff;
     font-family: cursive;
-    text-align: center;
+}
+
+#row-select .card {
+    margin-top:20px;
 }
 
 #main-body #title-text {

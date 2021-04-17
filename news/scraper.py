@@ -20,7 +20,7 @@ def scrape(website_url, tag_name, class_name):
         text = article.getText()
         article_texts.append(text)
 
-    return article_texts[1:20]
+    return article_texts[1:19]
 
 
 # bbc_news = scrape("https://www.bbc.com/news", 'h3', 'nw-o-link-split__text')

@@ -46,8 +46,26 @@
             <h1>NewsHub</h1>
             <a href="/" class="btn btn-danger">Refresh News</a>
         </div> -->
-
         <div class="container">
+            <h3 id="paper-name"> News from NBC</h3>
+            <div class="row">
+                {% for nbc in nbc_news %}
+                    <div class="col-sm">
+                        <div class="card" style="height:26rem; width:19rem; margin-bottom:2rem;">
+                            <img src="{% static '/news/images/bnews.jpg' %}" class="card-img-top" alt="image">
+                            <div class="card-body">
+                            <h5 class="card-title">{{nbc}}</h5>
+                            <p class="card-text">Site Name</p>
+                            <p class="card-text">Published Time</p>
+                            <a href="#" class="btn btn-primary">Listen</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+          </div>
+
+        <!-- <div class="container">
             <div class="row">
                 <div class="news">
                         <h3 id="paper-name"> News from NBC</h3>
@@ -58,7 +76,7 @@
                         <br>
                 </div>
             </div>
-        </div> 
+        </div>  -->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">

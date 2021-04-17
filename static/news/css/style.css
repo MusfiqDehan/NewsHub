@@ -1,8 +1,40 @@
 body#main-body {
     background-color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cursive;
+    text-align: center;
+}
+
+#main-body #title-text {
+    font-size: 50px;
+    font-family: cursive;
+    color: white;
+}
+
+#paper-name {
+    font-size: 30px;
+    font-weight: 900;
+    padding: 30px;
+    text-decoration: underline;
+}
+
+#main-body a {
+    color:#ffffff;
+    font-size: 23px;
 }
 
 #nav1, #nav2 {
     background-color: blue;
+}
+
+#main-body h1 {
+    text-align: center;
+    padding: 20px;
+    font-weight: 900;
+}
+
+#main-body #page-title {
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    margin: 40px;
 }

@@ -1,11 +1,10 @@
 from bs4 import BeautifulSoup
-from django.db.models.fields import AutoField
 import requests
-import sqlite3
-import datetime
+# import sqlite3
+# import datetime
 
-conn = sqlite3.connect('db.sqlite3')
-c = conn.cursor()
+# conn = sqlite3.connect('db.sqlite3')
+# c = conn.cursor()
 
 
 def scrape(website_url, tag_name, class_name):
@@ -15,21 +14,21 @@ def scrape(website_url, tag_name, class_name):
     article_tags = soup.find_all(name=tag_name, class_=class_name)
     article_texts = [text.getText() for text in article_tags]
 
-    c.execute("INSERT INTO news_news VALUES(?, ?, ?, ?, ?)", (AutoField, article_texts, article_texts, article_texts, article_texts))
-    conn.commit()
+    # c.execute("INSERT INTO news_news VALUES(?, ?, ?, ?, ?)", (article_texts))
+    # conn.commit()
     for article in article_tags:
         text = article.getText()
         article_texts.append(text)
 
-    return article_texts[1:15]
+    return article_texts[1:20]
 
 
-bbc_news = scrape("https://www.bbc.com/news", 'h3', 'nw-o-link-split__text')
-nbc_news = scrape("https://www.nbcnews.com/", 'h2', 'alacarte__headline')
-aljazeera = scrape("https://www.aljazeera.com/", 'a', 'fte-featured__title__link')
+# bbc_news = scrape("https://www.bbc.com/news", 'h3', 'nw-o-link-split__text')
+# nbc_news = scrape("https://www.nbcnews.com/", 'h2', 'alacarte__headline')
+# aljazeera = scrape("https://www.aljazeera.com/", 'a', 'fte-featured__title__link')
 
-print(bbc_news)
-print('\n')
-print(nbc_news)
-print('\n')
-print(aljazeera)
+# print(bbc_news)
+# print('\n')
+# print(nbc_news)
+# print('\n')
+# print(aljazeera)

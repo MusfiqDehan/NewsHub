@@ -1,5 +1,11 @@
 from bs4 import BeautifulSoup
+from django.db.models.fields import AutoField
 import requests
+import sqlite3
+import datetime
+
+conn = sqlite3.connect('db.sqlite3')
+c = conn.cursor()
 
 
 def scrape(website_url, tag_name, class_name):
@@ -9,6 +15,8 @@ def scrape(website_url, tag_name, class_name):
     article_tags = soup.find_all(name=tag_name, class_=class_name)
     article_texts = [text.getText() for text in article_tags]
 
+    c.execute("INSERT INTO news_news VALUES(?, ?, ?, ?, ?)", (AutoField, article_texts, article_texts, article_texts, article_texts))
+    conn.commit()
     for article in article_tags:
         text = article.getText()
         article_texts.append(text)

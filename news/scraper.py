@@ -23,12 +23,12 @@ def scrape(website_url, tag_name, class_name):
     return article_texts[1:19]
 
 
-# bbc_news = scrape("https://www.bbc.com/news", 'h3', 'nw-o-link-split__text')
-# nbc_news = scrape("https://www.nbcnews.com/", 'h2', 'alacarte__headline')
-# aljazeera = scrape("https://www.aljazeera.com/", 'a', 'fte-featured__title__link')
+bbc_news = scrape("https://www.bbc.com/news", 'h3', 'nw-o-link-split__text')
+nbc_news = scrape("https://www.nbcnews.com/", 'h2', 'alacarte__headline')
+aljazeera = scrape("https://www.aljazeera.com/", 'a', 'fte-featured__title__link')
 
-# print(bbc_news)
-# print('\n')
-# print(nbc_news)
-# print('\n')
-# print(aljazeera)
+print(bbc_news)
+print('\n')
+print(nbc_news)
+print('\n')
+print(aljazeera)

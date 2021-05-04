@@ -33,27 +33,23 @@
                         <a class="nav-link" href="/">Latest News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Archive</a>
+                        <a class="nav-link" href="/archive">Archive</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
         <div class="container">
-            <h3 id="paper-name"> News from NBC</h3>
             <div class="row">
-                {% for object in object_list %}
+                {% for item in news %}
                     <div class="col-sm">
                         <div class="card" style="height:26rem; width:19rem; margin-bottom:2rem;">
-                            <img src="{{ object.image }}" class="card-img-top" alt="image">
+                            <img src="{{ item.img_link }}" class="card-img-top" alt="image">
                             <div class="card-body">
-                            <a href="{{ object.url }}">
-                                <h5 class="card-title">{{ object.title }}</h5>
+                            <a href="{{ item.original_link }}">
+                                <h5 class="card-title">{{ item.headline }}</h5>
                             </a>                            
-                            <p class="card-text">NBC News</p>
+                            <p class="card-text">{{ item.newspaper_name }}</p>
                             <p class="card-text">Published Time</p>
                             <a href="#" class="btn btn-primary">Listen</a>
                             <a href="#" class="btn btn-primary">Bookmark</a>
@@ -69,5 +65,12 @@
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
         </script>
     </body>
+
+    <footer>
+        <a class="footer-link"  href="http://" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a class="footer-link"  href="http://" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="footer-link"  href="http://" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <p class="credit">&copy; 2021 | NewsHub</p>
+    </footer>
 
 </html>

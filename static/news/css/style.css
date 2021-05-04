@@ -21,12 +21,21 @@ body#main-body {
 }
 
 #main-body a {
-    color:#ffffff;
+    color:#000;
     font-size: 23px;
 }
 
 #nav1, #nav2 {
     background-color: blue;
+}
+
+#nav2 {
+    margin-bottom: 2.5rem;
+}
+
+#nav2 .nav-item {
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 #main-body h1 {
@@ -40,4 +49,26 @@ body#main-body {
     text-align: center;
     padding: 50px;
     margin: 40px;
+}
+
+footer {
+    background-color: blue;
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.credit {
+    padding-top: 20px;
+    font-size: 1rem;
+}
+
+.footer-link {
+    color: #f6830f;
+    text-decoration: none;
+    margin: auto 20px;
+}
+
+.footer-link:hover {
+    color: #000;
 }

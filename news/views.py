@@ -15,8 +15,8 @@ app_name = 'news'
 
 zipped_data = zip(bbc_news, nbc_news, aljazeera, prothom_alo, manob_jomin, kaler_kontho)
 
-def index(request):
-    return render(request, 'news/home.html', 
+def latest(request):
+    return render(request, 'news/latest.html', 
     {
         'bbc_news': bbc_news, 
         'nbc_news': nbc_news, 

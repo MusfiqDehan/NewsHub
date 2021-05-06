@@ -4,6 +4,10 @@ from . import views
 app_name = 'news'
 
 urlpatterns = [
-    path('', views.latest, name='latest'),
-    path('archive', views.archive, name='archive')
+    path('register/', views.registerPage, name="register"),
+	path('login/', views.loginPage, name="login"),  
+	path('logout/', views.logoutUser, name="logout"),
+
+    path('', views.latest, name="latest"),
+    path('archive', views.archive, name="archive")
 ]

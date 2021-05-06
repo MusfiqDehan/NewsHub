@@ -30,10 +30,13 @@
                         <a  class="nav-link" href="#">Home <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Latest News</a>
+                        <a class="nav-link" href="{% url 'news:latest' %}">Latest News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/archive">Archive</a>
+                        <a class="nav-link" href="{% url 'news:archive' %}">Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news:logout' %}">Logout</a>
                     </li>
                 </ul>
             </div>

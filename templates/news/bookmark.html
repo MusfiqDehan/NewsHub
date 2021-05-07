@@ -1,0 +1,66 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link rel="shortcut icon" type="icon" href="{% static '/news/favicon.ico' %}">
+        <link rel="stylesheet" type="text/css" href="{% static '/news/css/style.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <title>NewsHub</title>
+    </head>
+
+
+    <body id="main-body">
+        <nav id="nav1" class="navbar navbar-light justify-content-center">
+            <span id="title-text" class="navbar-brand mb-0 h1">NewsHub</span>
+        </nav>
+    
+        <nav id="nav2" class="navbar navbar-expand-lg navbar-light">
+            <div class="justify-content-center collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a  class="nav-link" href="#">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news:latest' %}">Latest News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news:archive' %}">Archive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news:logout' %}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                {% block content %}
+                {% endblock %}
+            </div>
+          </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        </script>
+        <script src="{% static '/news/js/script.js' %}"></script>
+        <script src="{% static '/news/js/bookmark.js' %}"></script>
+    </body>
+
+    <footer>
+        <a class="footer-link"  href="http://" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a class="footer-link"  href="http://" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="footer-link"  href="http://" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <p class="credit">&copy; 2021 | NewsHub</p>
+    </footer>
+
+</html>

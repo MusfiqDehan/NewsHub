@@ -12,7 +12,10 @@
                 <p class="card-text">{{ item.newspaper_name }}</p>
                 <p class="card-text">Published Time</p>
                 <a href="#" class="btn btn-primary">Listen</a>
-                <a href="#" class="btn btn-primary">Bookmark</a>
+                <button data-item={{item.id}} data-action="add" 
+                        class="btn btn-primary update-bookmark">
+                    Bookmark
+                </button>
                 </div>
             </div>
         </div>

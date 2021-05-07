@@ -86,3 +86,12 @@ def archive(request):
         'news/archive.html',
         {'news': news}
     )
+
+@login_required(login_url='news:login')
+def bookmark(request):
+    news = News.objects.all()
+    return render(
+        request,
+        'news/bookmark.html',
+        {'news': news}
+    )

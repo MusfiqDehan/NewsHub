@@ -1,4 +1,5 @@
 from django.db import models
+from .forms import User
 
 
 class News(models.Model):
@@ -6,7 +7,7 @@ class News(models.Model):
     original_link = models.CharField(max_length=2048)
     img_link = models.CharField(max_length=2048)
     newspaper_name = models.CharField(max_length=255)
-    
+    bookmark = models.ManyToManyField(User, related_name='bookmark', blank=True)
 
 
 class Headline(models.Model):

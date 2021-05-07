@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect 
-from django.http import HttpResponse
+import json
+from django.http import HttpResponse, JsonResponse
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
-from .scraper import scrape
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+from .scraper import scrape
 from .models import *
 from .forms import CreateUserForm
 
@@ -86,6 +86,7 @@ def archive(request):
         'news/archive.html',
         {'news': news}
     )
+
 
 @login_required(login_url='news:login')
 def bookmark(request):

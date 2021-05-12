@@ -1,29 +1,51 @@
+from bs4 import BeautifulSoup
 import requests
-from django.shortcuts import render, redirect
-from bs4 import BeautifulSoup as BSoup
-from news.models import Headline
+import sqlite3
 
-requests.packages.urllib3.disable_warnings()
+# conn = sqlite3.connect('newshub.sqlite3')
+# c = conn.cursor()
+
+# c.execute("CREATE TABLE news1(title TEXT, link TEXT, images TEXT)")
 
 
-def scrape(request):
-	session = requests.Session()
-	session.headers = {"User-Agent": "Googlebot/2.1 (+http://www.google.com/bot.html)"}
-	url = "https://www.theonion.com/"
+website_url = "https://www.bbc.com/news"
+response = requests.get(website_url)
+web_page = response.text
+soup = BeautifulSoup(web_page, "html.parser")
 
-	content = session.get(url, verify=False).content
-	soup = BSoup(content, "html.parser")
-	News = soup.find_all('div', {"class":"curation-module__item"})
-	for artcile in News:
-		main = artcile.find_all('a')[0]
-		link = main['href']
-		image_src = str(main.find('img')['srcset']).split(" ")[-4]
-		title = main['title']
 
-		new_headline = Headline()
-		new_headline.ttitle = title
-		new_headline.uurl = link
-		new_headline.iimage = image_src
-		new_headline.save()
-	return redirect("../")
+article_texts = []
+article_links = []
+article_images = []
+site_names = ['BBC News', 'NBC News', 'Aljazeera']
 
+
+article_tags = soup.find_all(name='a', class_='gs-c-promo-heading')
+
+for article in article_tags:
+    text = article.getText()
+    article_texts.append(text)
+
+    link = article.get("href")
+    article_links.append(link)
+
+
+
+images = soup.find_all(name='img')
+
+for image in images:
+    article_images.append(image['src'])
+
+
+
+for i in range(10):
+    print(article_texts[i])
+    print("https://www.bbc.com"+article_links[i])
+    print(article_images[i])
+    print('\n')
+    # c.execute("INSERT INTO news1 VALUES(?, ?, ?)", (article_texts[i], "https://www.bbc.com"+article_links[i], article_images[i]))
+    # conn.commit()
+
+
+# conn.close()
+# c.close()

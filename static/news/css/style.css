@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@500&display=swap');
+
 body#main-body {
     background-color: #f7a440;
-    font-family: cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #row-select .card {
@@ -29,9 +31,10 @@ button#update-btn:hover {
 }
 
 #main-body #title-text {
-    font-size: 50px;
-    font-family: cursive;
+    font-size: 2.7rem;
+    font-family: Ubuntu;
     color: #000;
+    font-weight: 400;
 }
 
 #paper-name {
@@ -43,16 +46,30 @@ button#update-btn:hover {
 
 #main-body a {
     color:#000;
-    font-size: 23px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-#nav1, #nav2 {
+#nav1 {
     background-color: #e1701a;
+    position: fixed;
+    z-index: 4;
+    width: 100%;
 }
 
 #nav2 {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     border-bottom: 2px solid #000;
+    background-color: #e1701a;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+#nav2 .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+	font-size: 2.5rem;
+	font-weight: bold;
 }
 
 #nav2 .nav-item {

@@ -8,7 +8,7 @@ import sqlite3
 # c.execute("CREATE TABLE news1(title TEXT, link TEXT, images TEXT)")
 
 
-website_url = "https://www.bbc.com/news"
+website_url = "https://www.bbc.com/news/technology"
 response = requests.get(website_url)
 web_page = response.text
 soup = BeautifulSoup(web_page, "html.parser")

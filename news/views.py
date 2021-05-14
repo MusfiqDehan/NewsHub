@@ -85,7 +85,7 @@ def latest(request):
 def archive(request):
     if 'q' in request.GET:
         q = request.GET['q']
-        news = News.objects.filter(headline__icontains=q)
+        news = News.objects.filter(headline__icontains=q) or News.objects.filter(newspaper_name__icontains=q)
     else:
         news = News.objects.all()
 

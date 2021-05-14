@@ -22,9 +22,6 @@ manob_jomin = scrape("https://mzamin.com/category.php?cid=8", 'a', '')
 kaler_kontho = scrape(
     "https://www.kalerkantho.com/online/country-news/", 'a', 'title hidden-xs')
 
-zipped_data = zip(bbc_news, nbc_news, aljazeera,
-                  prothom_alo, manob_jomin, kaler_kontho)
-
 
 def registerPage(request):
     if request.user.is_authenticated:
@@ -70,15 +67,15 @@ def logoutUser(request):
 
 
 def latest(request):
-    return render(request, 'news/latest.html',
-                  {
-                      'bbc_news': bbc_news,
-                      'nbc_news': nbc_news,
-                      'aljazeera': aljazeera,
-                      'prothom_alo': prothom_alo,
-                      'manob_jomin': manob_jomin,
-                      'kaler_kontho': kaler_kontho
-                  })
+    context = {
+        'bbc_news': bbc_news,
+        'nbc_news': nbc_news,
+        'aljazeera': aljazeera,
+        'prothom_alo': prothom_alo,
+        'manob_jomin': manob_jomin,
+        'kaler_kontho': kaler_kontho
+    }
+    return render(request, 'news/latest.html', context)
 
 
 @login_required(login_url='news:login')

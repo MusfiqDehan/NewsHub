@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base/base.html' %}
 
 {% block content %}
     {% for item in news %}
@@ -11,7 +11,6 @@
                 </a>                            
                 <p class="card-text">- {{ item.newspaper_name }}</p>
                 <!-- <p class="card-text">Published Time</p> -->
-                <!-- <a href="#" class="btn btn-primary">Listen</a> -->
                 <button id="update-btn" class="btn btn-primary">Bookmark</button>
                 </div>
             </div>

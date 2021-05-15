@@ -1,58 +1,14 @@
-{% load static %}
+{% extends 'base/base.html' %}
 
-<!doctype html>
-<html lang="en">
-
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Bootstrap CSS -->
-        <link rel="shortcut icon" type="icon" href="{% static '/news/favicon.ico' %}">
-        <link rel="stylesheet" type="text/css" href="{% static '/news/css/style.css' %}">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-        <title>NewsHub</title>
-    </head>
-
-
-    <body id="main-body">
-        <nav id="nav1" class="navbar navbar-light justify-content-center">
-            <span id="title-text" class="navbar-brand mb-0 h1">NewsHub</span>
-        </nav>
-    
-        <nav id="nav2" style="margin-top: 70px;" class="navbar navbar-expand-lg navbar-light">
-            <div class="justify-content-center collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a  class="nav-link" href="#">Home <span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Latest News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/archive">Archive</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="container" style="padding-top: 150px;">
+{% block content %}
+        <div class="container">
             <div class="row">
                 {% for bbc in bbc_news %}
                     <div class="col-sm">
                         <div id="card-edit" class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
-                            <!-- <img src="{% static '/news/img/bnews.jpg' %}" class="card-img-top" alt="image"> -->
-                            <div class="card-body">
- 
-                            <h5 class="card-title">{{ bbc }}</h5>
-                           
-                            <p class="card-text">- BBC News</p>
-                            <!---<p class="card-text">Published Time</p>--->
-                            <!---<a href="#" class="btn btn-primary">Listen</a>--->
-                           <!---<a href="#" class="btn btn-primary">Bookmark</a>---->
+                            <div class="card-body"> 
+                                <h5 class="card-title">{{ bbc }}</h5>                           
+                                <p class="card-text">- BBC News</p>
                             </div>
                         </div>
                     </div>
@@ -61,15 +17,9 @@
                 {% for nbc in nbc_news %}
                     <div class="col-sm">
                         <div id="card-edit"  class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
-                            <!-- <img src="{% static '/news/img/bnews.jpg' %}" class="card-img-top" alt="image"> -->
                             <div class="card-body">
- 
-                            <h5 class="card-title">{{ nbc }}</h5>
-                           
-                            <p class="card-text">- NBC News</p>
-                            <!---<p class="card-text">Published Time</p>--->
-                            <!---<a href="#" class="btn btn-primary">Listen</a>--->
-                           <!---<a href="#" class="btn btn-primary">Bookmark</a>---->
+                                <h5 class="card-title">{{ nbc }}</h5>                           
+                                <p class="card-text">- NBC News</p>
                             </div>
                         </div>
                     </div>
@@ -78,15 +28,9 @@
                 {% for alja in aljazeera %}
                     <div class="col-sm">
                         <div id="card-edit"  class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
-                            <!-- <img src="{% static '/news/img/bnews.jpg' %}" class="card-img-top" alt="image"> -->
                             <div class="card-body">
-
-                            <h5 class="card-title">{{ alja }}</h5>
-                          
-                            <p class="card-text">- Aljazeera</p>
-                            <!---<p class="card-text">Published Time</p>--->
-                            <!---<a href="#" class="btn btn-primary">Listen</a>--->
-                           <!---<a href="#" class="btn btn-primary">Bookmark</a>---->
+                                <h5 class="card-title">{{ alja }}</h5>                          
+                                <p class="card-text">- Aljazeera</p>
                             </div>
                         </div>
                     </div>
@@ -95,15 +39,9 @@
                 {% for pa in prothom_alo %}
                     <div class="col-sm">
                         <div id="card-edit" class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
-                            <!-- <img src="{% static '/news/img/bnews.jpg' %}" class="card-img-top" alt="image"> -->
-                            <div class="card-body">
- 
-                            <h5 class="card-title">{{ pa }}</h5>
-                          
-                            <p class="card-text">- প্রথম আলো</p>
-                            <!---<p class="card-text">Published Time</p>--->
-                            <!---<a href="#" class="btn btn-primary">Listen</a>--->
-                           <!---<a href="#" class="btn btn-primary">Bookmark</a>---->
+                            <div class="card-body"> 
+                                <h5 class="card-title">{{ pa }}</h5>                          
+                                <p class="card-text">- প্রথম আলো</p>
                             </div>
                         </div>
                     </div>
@@ -112,15 +50,9 @@
                 {% for mj in manob_jomin %}
                     <div class="col-sm">
                         <div id="card-edit" class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
-                            <!-- <img src="{% static '/news/img/bnews.jpg' %}" class="card-img-top" alt="image"> -->
                             <div class="card-body">
-
-                            <h5 class="card-title">{{ mj }}</h5>
-                          
-                            <p class="card-text">- মানবজমিন</p>
-                            <!---<p class="card-text">Published Time</p>--->
-                            <!---<a href="#" class="btn btn-primary">Listen</a>--->
-                           <!---<a href="#" class="btn btn-primary">Bookmark</a>---->
+                                <h5 class="card-title">{{ mj }}</h5>                         
+                                <p class="card-text">- মানবজমিন</p>
                             </div>
                         </div>
                     </div>
@@ -129,33 +61,14 @@
                 {% for kk in kaler_kontho %}
                     <div class="col-sm">
                         <div id="card-edit"  class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
-                            <!-- <img src="{% static '/news/img/bnews.jpg' %}" class="card-img-top" alt="image"> -->
-                            <div class="card-body">
-                            
-                            <h5 class="card-title">{{ kk }}</h5>
-                            
-                            <p class="card-text">- কালের কণ্ঠ</p>
-                            <!---<p class="card-text">Published Time</p>--->
-                            <!---<a href="#" class="btn btn-primary">Listen</a>--->
-                           <!---<a href="#" class="btn btn-primary">Bookmark</a>---->
+                            <div class="card-body">                           
+                                <h5 class="card-title">{{ kk }}</h5>                            
+                                <p class="card-text">- কালের কণ্ঠ</p>
                             </div>
                         </div>
                     </div>
                 {% endfor %}
             </div>
-          </div>
+        </div>
 
-        <script src="{% static '/news/js/script.js' %}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
-        </script>
-    </body>
-
-    <footer>
-        <a class="footer-link"  href="http://" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a class="footer-link"  href="http://" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a class="footer-link"  href="http://" target="_blank" rel="noopener noreferrer">Twitter</a>
-        <p class="credit">&copy; 2021 | NewsHub</p>
-    </footer>
-
-</html>
+{% endblock %}

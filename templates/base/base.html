@@ -1,8 +1,9 @@
-{% extends 'base/base.html' %}
-
+{% include 'base/head.html' %}
+{% include 'base/navbar.html' %}
         <div class="container" style="padding-bottom: 60px; padding-top: 125px;">
             <div class="row">
                 {% block content %}
                 {% endblock %}
             </div>
         </div>
+{% include 'base/footer.html' %}

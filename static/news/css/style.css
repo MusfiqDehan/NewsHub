@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 
 :root {
     --main-bg-color: #f7a440;
@@ -9,7 +10,8 @@
 
 body#main-body {
     background-color: var(--main-bg-color);
-    font-family: 'Merriweather', serif;
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Arvo', serif;
     color: var(--main-font-color);
 }
 
@@ -110,45 +112,3 @@ a.footer-link {
     border-bottom: 2px solid #000;
 }
 
-
-/*======================
-    404 page
-=======================*/
-
-
-.page_404 { 
-    padding:40px 0; 
-    background:#fff; 
-    font-family: 'Arvo', serif;
-}
-
-.page_404  img { 
-    width:100%;
-}
-
-.four_zero_four_bg{
-    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-    height: 400px;
-    background-position: center;
- }
- 
- 
- .four_zero_four_bg h1{
-    font-size:80px;
- }
- 
-.four_zero_four_bg h3 {
-    font-size:80px;
-}
-			 
-.link_404 {			 
-	color: #fff!important;
-    padding: 10px 20px;
-    background: #39ac31;
-    margin: 20px 0;
-    display: inline-block;
-}
-
-.contant_box_404 { 
-    margin-top:-50px;
-}

@@ -19,6 +19,9 @@
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/4e448c1c67.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/solid.css" integrity="sha384-LA8Ug4T/nhVkyhrSmSirsoAo9iDrBk8E7U80aSPeD+w3vO8PzOJIS6agGcbIwwX0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/regular.css" integrity="sha384-Dn9L7vwedvmbdep+J8U5Zbrp+ES46dt8pm8ZMUu9iOR9isC4+Y/KP1h4StrDd/F+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/fontawesome.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
 
     <title>NewsHub</title>
 
@@ -46,6 +49,12 @@
             font-size: 16px;
             font-weight: 400;
             text-decoration: none;
+        }
+
+        #main-body a.heart-icon {
+            color: var(--green-bg-color);
+            font-size: 2rem;
+            font-weight: 500;
         }
 
 
@@ -79,6 +88,18 @@
         }
 
         button#update-btn:hover {
+            background-color: var(--main-bg-color);
+            color: #000;
+            border: 2px solid var(--green-bg-color);
+        }
+
+        a#update-btn {
+            background-color: var(--green-bg-color);
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        a#update-btn:hover {
             background-color: var(--main-bg-color);
             color: #000;
             border: 2px solid var(--green-bg-color);

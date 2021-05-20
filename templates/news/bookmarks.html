@@ -1,7 +1,7 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
-    {% for item in news %}
+    {% for item in bookmarkList %}
         <div class="col-sm">
             <div id="card-edit" class="card" style="height:25rem; width:19rem; margin-bottom:2rem;">
                 <img src="{{ item.img_link }}" class="card-img-top" alt="image">
@@ -11,7 +11,7 @@
                     </a>
                     <p class="card-text">- {{ item.newspaper_name }}</p>
                     <!-- <p class="card-text">Published Time</p> -->
-                    <a href="{% url 'news:add_to_bookmark' item.id %}" id="update-btn" class="btn btn-primary">Bookmark</a>
+                    <a href="{% url 'news:add_to_bookmark' item.id %}" id="update-btn" class="btn btn-primary">Remove</a>
 
                     <!-- {% if is_bookmarked %}
                     <a class="heart-icon" href="{% url 'news:add_to_bookmark' item.id %}">

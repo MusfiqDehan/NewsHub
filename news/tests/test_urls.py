@@ -18,8 +18,8 @@ class TestUrls(SimpleTestCase):
         self.assertEquals(resolve(url).func, logoutUser)
 
     def test_bookmark_url_resolves(self):
-        url = reverse("news:bookmark")
-        self.assertEquals(resolve(url).func, bookmark)
+        url = reverse("news:bookmark_list")
+        self.assertEquals(resolve(url).func, bookmark_list)
 
     def test_latest_url_resolves(self):
         url = reverse("news:latest")

@@ -28,7 +28,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'world-newshub.herokuapp.com',
     '127.0.0.1'
-    ]
+]
 
 
 # Application definition

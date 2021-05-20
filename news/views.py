@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect, HttpResponseRedirect
 import json
+from django.urls import reverse
 from django.http import HttpResponse, JsonResponse
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
@@ -80,20 +81,45 @@ def latest(request):
 
 @login_required(login_url='news:login')
 def archive(request):
+    news = News.objects.all()
+    is_bookmarked = False
+    
+    for n in news:
+        if n.bookmark.filter(id=request.user.id).exists():
+            is_bookmarked = True
+
     if 'q' in request.GET:
         q = request.GET['q']
         news = News.objects.filter(headline__icontains=q) or News.objects.filter(newspaper_name__icontains=q)
     else:
         news = News.objects.all()
 
-    return render(request, 'news/archive.html', {'news': news})
+    context = {
+        'news': news,
+        'is_bookmarked': is_bookmarked
+    }
+
+    return render(request, 'news/archive.html', context)
 
 
 @login_required(login_url='news:login')
-def bookmark(request):
-    news = News.objects.all()
-    return render(
-        request,
-        'news/bookmark.html',
-        {'news': news}
-    )
+def add_to_bookmark(request, id):
+    card = get_object_or_404(News, id=id)
+    
+    if card.bookmark.filter(id=request.user.id).exists():
+        card.bookmark.remove(request.user)
+    else:
+        card.bookmark.add(request.user)
+
+    return HttpResponseRedirect(card.get_absolute_url())
+
+
+@login_required(login_url='news:login')
+def bookmark_list(request):
+    user = request.user
+    bookmarkList = user.bookmark.all()
+    context = {
+        'bookmarkList': bookmarkList
+    }
+
+    return render(request,'news/bookmarks.html', context)

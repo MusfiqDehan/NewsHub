@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="container">
+            <div class="row">
+                {% for bbc in bbc_news %}
+                    <div class="col-sm">
+                        <div id="card-edit" class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
+                            <div class="card-body"> 
+                                <h6 class="card-title">{{ bbc }}</h6>                           
+                                <p class="card-text">- BBC News</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% for nbc in nbc_news %}
+                    <div class="col-sm">
+                        <div id="card-edit"  class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ nbc }}</h5>                           
+                                <p class="card-text">- NBC News</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% for alja in aljazeera %}
+                    <div class="col-sm">
+                        <div id="card-edit"  class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ alja }}</h5>                          
+                                <p class="card-text">- Aljazeera</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% for pa in prothom_alo %}
+                    <div class="col-sm">
+                        <div id="card-edit" class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
+                            <div class="card-body"> 
+                                <h5 class="card-title">{{ pa }}</h5>                          
+                                <p class="card-text">- প্রথম আলো</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% for mj in manob_jomin %}
+                    <div class="col-sm">
+                        <div id="card-edit" class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ mj }}</h5>                         
+                                <p class="card-text">- মানবজমিন</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% for kk in kaler_kontho %}
+                    <div class="col-sm">
+                        <div id="card-edit"  class="card" style="height:9rem; width:19rem; margin-bottom:2rem;">
+                            <div class="card-body">                           
+                                <h5 class="card-title">{{ kk }}</h5>                            
+                                <p class="card-text">- কালের কণ্ঠ</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+{% endblock %}

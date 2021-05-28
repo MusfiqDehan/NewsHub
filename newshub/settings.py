@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '(2gaibgekze_h&%-u=j62@i9mk=v7exqq&e-p&y+hwfsays1$$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'world-newshub.herokuapp.com',
@@ -125,7 +125,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # STATICFILES_DIRS = [
-#     BASE_DIR / 'static'
+#     BASE_DIR / 'news/static'
 # ]
 
 STATIC_ROOT = BASE_DIR / 'static'

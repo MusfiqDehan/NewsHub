@@ -92,13 +92,13 @@ a#update-btn:hover {
     position: fixed;
     width: 100%;
     z-index: 3;
-    color: var(--main-bg-color) !important;
+    color: var(--main-bg-color)!important;
 }
 
 #nav2 .navbar-brand {
     font-size: 2.5rem;
     font-weight: bold;
-    color: var(--main-bg-color) !important;
+    color: var(--main-bg-color)!important;
 }
 
 #nav2 .nav-item {
@@ -132,8 +132,4 @@ a.footerlink {
 .footerlink:hover {
     border-bottom: 2px solid var(--main-bg-color);
 }
-
-/*============== 
-Login Register
-================*/
 

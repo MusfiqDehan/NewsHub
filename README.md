@@ -1,5 +1,9 @@
 <h1 align="center"> NewsHub</h1>
   <p align="center"> A multi-functional News Aggregator web app using Django</p>
+  
+***Home Page***
+![home-latest](https://user-images.githubusercontent.com/47440165/120078143-d341cc00-c0cf-11eb-8af6-81507ac5d15c.png)
+
 
 
 ## How to run on your own pc

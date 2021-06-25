@@ -4,6 +4,9 @@
 ***Home Page***
 ![home-latest](https://user-images.githubusercontent.com/47440165/120078143-d341cc00-c0cf-11eb-8af6-81507ac5d15c.png)
 
+***Archive Page***
+![archive](https://github.com/MusfiqDehan/newshub/blob/master/static/Screenshots/archive.png)
+
 
 
 ## How to run on your own pc

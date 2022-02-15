@@ -1,19 +1,19 @@
-{% extends 'base.html' %}
+{% extends 'base1.html' %}
 
 {% block content %}
-    {% for item in news %}
-        <div class="col-sm">
-            <div id="card-edit" class="card" style="height:25rem; width:19rem; margin-bottom:2rem;">
-                <img src="{{ item.img_link }}" class="card-img-top" alt="image">
-                <div class="card-body">
-                    <a href="{{ item.original_link }}">
-                        <h6 class="card-title">{{ item.headline }}</h6>
-                    </a>
-                    <p class="card-text">- {{ item.newspaper_name }}</p>
-                    <!-- <p class="card-text">Published Time</p> -->
-                    <a href="{% url 'news:add_to_bookmark' item.id %}" id="update-btn" class="btn btn-primary">Bookmark</a>
+{% for item in news %}
+<div class="col-sm">
+    <div id="card-edit" class="card" style="height:25rem; width:19rem; margin-bottom:2rem;">
+        <img src="{{ item.img_link }}" class="card-img-top" alt="image">
+        <div class="card-body">
+            <a href="{{ item.original_link }}">
+                <h6 class="card-title">{{ item.headline }}</h6>
+            </a>
+            <p class="card-text">- {{ item.newspaper_name }}</p>
+            <!-- <p class="card-text">Published Time</p> -->
+            <a href="{% url 'news:add_to_bookmark' item.id %}" id="update-btn" class="btn btn-primary">Bookmark</a>
 
-                    <!-- {% if is_bookmarked %}
+            <!-- {% if is_bookmarked %}
                     <a class="heart-icon" href="{% url 'news:add_to_bookmark' item.id %}">
                         <i class="fas fa-heart fa-lg"></i>
                     </a>
@@ -22,8 +22,8 @@
                         <i class="far fa-heart fa-lg"></i>
                     </a>
                     {% endif %} -->
-                </div>
-            </div>
         </div>
-    {% endfor %}
+    </div>
+</div>
+{% endfor %}
 {% endblock %}

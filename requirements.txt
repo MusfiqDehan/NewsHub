@@ -2,7 +2,7 @@ asgiref==3.3.4
 autopep8==1.5.7
 beautifulsoup4==4.9.3
 bs4==0.0.1
-certifi==2020.12.5
+certifi==2022.6.15
 chardet==4.0.0
 Django==4.1
 fontawesome-free==5.15.4

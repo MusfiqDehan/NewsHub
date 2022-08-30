@@ -12,7 +12,7 @@ pycodestyle==2.7.0
 pytz==2022.2.1
 requests==2.25.1
 soupsieve==2.2.1
-sqlparse==0.4.1
+sqlparse==0.4.2
 toml==0.10.2
 urllib3==1.26.4
 whitenoise==5.2.0

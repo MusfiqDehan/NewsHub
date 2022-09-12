@@ -1,4 +1,4 @@
-asgiref==3.3.4
+asgiref==3.5.2
 autopep8==1.5.7
 beautifulsoup4==4.11.1
 bs4==0.0.1

@@ -1,5 +1,5 @@
 asgiref==3.5.2
-autopep8==1.7.0
+autopep8==2.0.0
 beautifulsoup4==4.11.1
 bs4==0.0.1
 certifi==2022.9.24

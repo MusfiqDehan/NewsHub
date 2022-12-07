@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'world-newshub.herokuapp.com',
+    'newshub.up.railway.app',
     '127.0.0.1'
 ]
 

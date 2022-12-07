@@ -7,7 +7,8 @@
 ***Archive Page***
 ![archive](https://github.com/MusfiqDehan/newshub/blob/master/static/Screenshots/archive.png)
 
-
+## Live Demo
+[![Deployed On Railway](https://railway.app/button.svg)](https://newshub.up.railway.app)
 
 ## How to run on your own pc
 

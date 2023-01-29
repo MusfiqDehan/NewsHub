@@ -14,4 +14,4 @@ whitenoise = "*"
 autopep8 = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.10"

@@ -14,5 +14,5 @@ requests==2.29.0
 soupsieve==2.4.1
 sqlparse==0.4.4
 toml==0.10.2
-urllib3==2.0.1
+urllib3==2.0.2
 whitenoise==6.4.0

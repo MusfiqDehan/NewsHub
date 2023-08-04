@@ -25,11 +25,7 @@ SECRET_KEY = '(2gaibgekze_h&%-u=j62@i9mk=v7exqq&e-p&y+hwfsays1$$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    'world-newshub.herokuapp.com',
-    'newshub.up.railway.app',
-    '127.0.0.1'
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

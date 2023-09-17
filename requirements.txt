@@ -9,7 +9,7 @@ fontawesome-free==5.15.4
 gunicorn==21.2.0
 idna==3.4
 pycodestyle==2.11.0
-pytz==2023.3
+pytz==2023.3.post1
 requests==2.31.0
 soupsieve==2.5
 sqlparse==0.4.4

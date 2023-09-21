@@ -9,7 +9,7 @@
 
 ## Live Demo
 
-[![Deployed On Railway](https://railway.app/button.svg)](https://newshub.up.railway.app)
+https://newshub-nl2p.onrender.com
 
 ## How to run on your own pc
 

@@ -29,7 +29,7 @@ git clone https://github.com/MusfiqDehan/newshub.git
     `python3 manage.py makemigrations && python3 manage.py migrate`
 
 -   Run server on localhost and open website in a browser <br>
-    `python3 manage.py runserver 8040`
+    `python3 manage.py runserver 8000`
 
 -   This newshub app will be live on <br>
-    `http://127.0.0.1:8040/`
+    `http://127.0.0.1:8000/`

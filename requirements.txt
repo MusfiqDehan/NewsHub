@@ -10,7 +10,7 @@ gunicorn==22.0.0
 idna==3.6
 pycodestyle==2.11.1
 pytz==2024.1
-requests==2.31.0
+requests==2.32.2
 soupsieve==2.5
 sqlparse==0.4.4
 toml==0.10.2

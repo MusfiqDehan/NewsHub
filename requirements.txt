@@ -7,7 +7,7 @@ chardet==5.2.0
 Django==5.1
 fontawesome-free==5.15.4
 gunicorn==22.0.0
-idna==3.6
+idna==3.8
 pycodestyle==2.11.1
 pytz==2024.1
 requests==2.32.2
